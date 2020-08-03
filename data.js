@@ -1,4 +1,4 @@
-let withRooms = {
+let houseData = {
     houseName: 'Joel\'s House of Awesomeness',
     estimatedWorth: 200213,
     estimatedWorthCurrency: 'USD',
@@ -62,4 +62,4 @@ let withRooms = {
     ]
 }
 
-export default withRooms;
+export default houseData;

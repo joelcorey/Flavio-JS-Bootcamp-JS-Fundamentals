@@ -20,9 +20,8 @@ Expected example:
 */
 
 class House {
-    constructor(rooms) {
-        this.roomCount = roomCount;
-        this.rooms = rooms;
+    constructor(data) {
+        this.rooms = data.rooms;
     }
 
     /** 
@@ -30,6 +29,10 @@ class House {
     */
     get area() {
         return this.calcArea();
+    }
+
+    get description() {
+        return this.consoleLog();
     }
 
     /** 
@@ -42,21 +45,28 @@ class House {
         be quite odd in the real world, it is common in programming 
         world.
         */
-        if (!this.hasOwnProperty(rooms)) {
-            return "This house has no rooms! What kind of crazy person lives here?!"
-        }
+        // if (!this.hasOwnProperty(this.rooms)) {
+        //     return "This house has no rooms! What kind of crazy person lives here?!"
+        // }
 
         /**
         Itterate through each room in the house and return the square footage.
         This does not take in to account hallways and other access ways.
         */
         let totalArea = 0;
-        for (const room in this.rooms) {
-            if (room.hasOwnProperty(squareFootage)) {
-                totalArea += room.squareFootage;
-            }
+        for (let i = 0; i < this.rooms.length; i++) {
+            // if (this.rooms[i].hasOwnProperty(squareFootage)) {
+                console.log(this.rooms[i]);
+                
+            // }
+            totalArea += this.rooms[i][squareFootage]     
         }
+        return this.rooms
         return totalArea;
+    }
+
+    consoleLog() {
+        console.log(this);
     }
 
 }
