@@ -28,7 +28,7 @@ class House {
     /** 
     Getter: gets total house area(square footage)
     */
-    getArea() {
+    get area() {
         return this.calcArea();
     }
 
