@@ -4,6 +4,7 @@ This keeps everything nice and tidy
 */
 import House from './house.js';
 import houseData from './data.js';
+import Disaster from './disaster.js';
 
 /**
 Unlike functions classes are not hoisted. They
@@ -13,7 +14,7 @@ is okay in JavaScript. Classes are not read in to memoery in
 this fashion.
 */
 let myHouse = new House(houseData);
-
+let myDisaster = new Disaster();
 // myHouse.description;
 
 console.log(myHouse.area);
