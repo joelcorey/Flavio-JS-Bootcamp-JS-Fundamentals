@@ -45,9 +45,9 @@ class House {
         be quite odd in the real world, it is common in programming 
         world.
         */
-        // if (!this.hasOwnProperty(this.rooms)) {
-        //     return "This house has no rooms! What kind of crazy person lives here?!"
-        // }
+        if (!this.rooms) {
+            return "This house has no rooms! What kind of crazy person lives here?!"
+        }
 
         /**
         Itterate through each room in the house and return the square footage.
@@ -55,13 +55,11 @@ class House {
         */
         let totalArea = 0;
         for (let i = 0; i < this.rooms.length; i++) {
-            // if (this.rooms[i].hasOwnProperty(squareFootage)) {
-                console.log(this.rooms[i]);
-                
-            // }
-            totalArea += this.rooms[i][squareFootage]     
+            if (this.rooms[i].squareFootage) {
+                totalArea += this.rooms[i].squareFootage
+            }
         }
-        return this.rooms
+        
         return totalArea;
     }
 

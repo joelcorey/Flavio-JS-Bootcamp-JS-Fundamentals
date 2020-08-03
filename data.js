@@ -58,6 +58,11 @@ let houseData = {
             roomType: 'bathroom',
             squareFootage: 600,
             notes: ['master bath, jacuzzi tub, rain shower, adjoined to master bedroom']
+        },
+        {
+            roomType: 'magical pantry',
+            squareFootage: 0,
+            notes: ['A magical pantry that defies the laws of nature!']
         }
     ]
 }
